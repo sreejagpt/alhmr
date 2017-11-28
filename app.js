@@ -14,7 +14,8 @@ var options = {
 }
 
 const hotwords = [{ file: ROOT_DIR + 'resources/lumos.pmdl', hotword: 'lumos' },
-                  { file: ROOT_DIR + 'resources/wingardium.pmdl', hotword: 'wingardium leviosa' }]
+                  { file: ROOT_DIR + 'resources/wingardium.pmdl', hotword: 'wingardium leviosa' },
+                  { file: ROOT_DIR + 'resources/nox.pmdl', hotword: 'nox' }]
 const language = "en-US"
 
 //recordProgram can also be 'arecord' which works much better on the Pi and low power devices

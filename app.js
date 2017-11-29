@@ -8,11 +8,6 @@ const speech = require('@google-cloud/speech')({
   keyFilename: ROOT_DIR + 'keyfile.json'
 })
 
-var options = {
-    url: 'https://hashtag-api.herokuapp.com/',
-    method: 'POST'
-}
-
 const hotwords = [{ file: ROOT_DIR + 'resources/lumos.pmdl', hotword: 'lumos' },
                   { file: ROOT_DIR + 'resources/wingardium.pmdl', hotword: 'wingardium leviosa' },
                   { file: ROOT_DIR + 'resources/nox.pmdl', hotword: 'nox' }]
@@ -25,8 +20,14 @@ Sonus.start(sonus)
 console.log('Say lumos or wingardium leviosa!...')
 
 sonus.on('hotword', (index, keyword) => {
-  console.log('💡')
+  console.log('💡' + keyword)
   const endpoint = keyword === 'wingardium leviosa' ? 'wingardium' : keyword
+
+  var options = {
+      url: 'https://hashtag-api.herokuapp.com/',
+      method: 'POST'
+  }
+
   options.url += endpoint
   // Start the request
   request(options, function (error, response, body) {

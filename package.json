@@ -1,0 +1,22 @@
+{
+  "name": "alhmr",
+  "version": "1.0.0",
+  "description": "Lumos!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreejagpt/alhmr.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sreejagpt/alhmr/issues"
+  },
+  "homepage": "https://github.com/sreejagpt/alhmr#readme",
+  "dependencies": {
+    "sonus": "^0.1.9"
+  }
+}
